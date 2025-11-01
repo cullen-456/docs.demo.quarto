@@ -1,0 +1,15 @@
+@startuml Class Diagram
+
+class OrderItem {
+    + String: name
+    + Float: price 
+    + Int: quantity
+}
+
+class Order {
+    + Int: id
+    + OrderItem[]: items
+    + Float: total()
+}
+
+@enduml

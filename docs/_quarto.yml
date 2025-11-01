@@ -1,0 +1,18 @@
+project:
+  type: website
+
+website:
+  title: "Quarto Docs Demo"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Architecture"
+        href: architecture/system-overview.qmd
+      - text: "Code"
+        href: code/index.html
+
+format:
+  html:
+    theme: cosmo
+    toc: true
