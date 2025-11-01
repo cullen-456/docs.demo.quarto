@@ -1,0 +1,35 @@
+name: Build and Publish Quarto Docs
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - run: |
+          pip install quarto-cli pdoc pylint plantuml
+          mkdir -p architecture/diagrams
+          # Generate UML diagram (PlantUML format)
+          #pyreverse src -o puml -p project
+          #mv classes_Project.puml architecture/diagrams/class-diagram.puml
+          # Generate API docs from docstrings
+          pdoc --html src --output-dir docs/code --force
+          # Render Quarto site
+          quarto render
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
