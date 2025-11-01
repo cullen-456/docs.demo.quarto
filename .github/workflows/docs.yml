@@ -1,4 +1,5 @@
 name: Build and Publish Quarto Docs
+runs-on: ubuntu-latest
 
 on:
   push:
