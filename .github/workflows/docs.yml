@@ -26,7 +26,7 @@ jobs:
           #pyreverse src -o puml -p project
           #mv classes_Project.puml architecture/diagrams/class-diagram.puml
           # Generate API docs from docstrings
-          pdoc --html src --output-dir docs/code --force
+          pdoc src --output-dir docs/code --force
           # Render Quarto site
           quarto render
       - uses: actions/upload-pages-artifact@v3
