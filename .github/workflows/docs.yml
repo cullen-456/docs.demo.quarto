@@ -28,7 +28,7 @@ jobs:
           # Generate API docs from docstrings
           pdoc src --output-dir docs/code
           # Render Quarto site
-          quarto render
+          quarto render docs 
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/_site
