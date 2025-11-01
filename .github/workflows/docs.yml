@@ -33,3 +33,5 @@ jobs:
         with:
           path: docs/_site
       - uses: actions/deploy-pages@v4
+        with:
+          environment: github-pages
