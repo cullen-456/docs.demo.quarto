@@ -36,5 +36,6 @@ jobs:
         with:
           environment: github-pages
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
