@@ -1,0 +1,7 @@
+---
+title: "System Overview"
+---
+
+## Class Diagram
+
+Below is an automatically generated UML class diagram for the project.

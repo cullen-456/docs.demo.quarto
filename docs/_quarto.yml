@@ -8,11 +8,14 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Architecture"
-        href: architecture/system-overview.qmd
+        href: "architecture/system-overview.qmd"
       - text: "Code"
-        href: code/index.html
+        href: "code/index.html"
 
 format:
   html:
     theme: cosmo
     toc: true
+
+resources: 
+  - code/**
